@@ -3,6 +3,10 @@ A sample blockchain implementation.
 
 This code works with Python3.
 You need to install Flask, cURL.
+To install Flask:
+	sudo pip3 install flask
+To install cURL:
+	brew install curl
 
 To run this code:
 Open two terminals.
