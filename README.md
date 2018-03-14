@@ -17,9 +17,7 @@ Open two terminals.
   This terminal will be used to make server call to mine, display blocks, create transactions.
   
   To create transactions:
-  curl "localhost:5000/comeOver" \
-     -H "Content-Type: application/json" \
-     -d '{"from": "ramharivitthala", "to":"shamharivitthala", "amount": 29}'
+  curl "localhost:5000/comeOver" -H "Content-Type: application/json" -d '{"from": "ramharivitthala", "to":"shamharivitthala", "amount": 29}'
   
   To display blocks:
   curl localhost:5000/blocks
