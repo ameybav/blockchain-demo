@@ -19,7 +19,7 @@ potentialMiners = ["ramharivitthala",
                       "jaimaharashtra",
                       "jaijavanjaikisan",
                       "tummujhekhoondomaitumheazadidonga"]
-
+toAddress = "jaijavanjaikisan"
 blockchain = []
 blockchain.append(firstBlock())
 
@@ -79,6 +79,7 @@ def consensus():
  
   blockchain = longestChain
 
+#proof of work
 def nightWatch(last_proof):
   incrementor = last_proof + 1
  
@@ -94,20 +95,8 @@ def mine():
   
   proof = nightWatch(last_proof)
   
-  print("Enter the details of the amount to be send")
-  amountToBeSend = input()
-  print("Enter the sender's address")
-  fromAddress = input()
-  if fromAddress not in potentialMiners:
-    print("Enter the address of the registered miner")
-    exit()
-  print("Enter the reciever's address")
-  toAddress = input()
-  if toAddress not in potentialMiners:
-    print("Enter the address of the registered miner")
-    exit()
   currentTransaction.append(
-    { "from": fromAddress, "to": toAddress, "amount": amountToBeSend }
+    { "from": "server", "to": toAddress, "amount": 3 }
   )
   
   new_block_data = {
